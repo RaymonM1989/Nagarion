@@ -1,0 +1,389 @@
+/* Resetting all Margins and Padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Background Image */
+  min-height: 100vh;
+  background-image: url(images/background_kingdom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* CSS Grid */
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-areas:
+    "header"
+    "main_content"
+    "footer";
+}
+
+header {
+  margin: 10px 10px 0px 10px;
+  height: 160px;
+  text-align: center;
+
+  /* Background Image */
+  background-image: url(images/background_header.png);
+  background-size: 100% 160px;
+
+  grid-area: header;
+}
+
+#header_title {
+  font-family: "New Rocker", "Garamond", "Georgia", "serif";
+  font-size: 90px;
+  color: #50280a;
+}
+
+#header_subtitle {
+  font-family: "Tillana", "Garamond", "Georgia", "Times New Roman", serif;
+  font-size: 20px;
+  color: #50280a;
+}
+
+#main-content {
+  grid-area: main_content;
+}
+
+#navbar {
+  margin: 0px 30px;
+  height: 100px;
+  text-align: center;
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+  /* Background Image */
+  background-image: url(images/parchment_top.png);
+  background-size: 100% 100px;
+}
+
+.navbutton {
+  /* Button Appearance */
+  width: 100px;
+  height: 100px;
+  border: none;
+  color: none;
+  background-color: transparent;
+  background-image: url(images/nav_banner.png);
+
+  /* Button Text Appearance */
+  font-family: "Tillana", "Garamond", "Georgia", "Times New Roman", serif;
+  font-size: 20px;
+  color: white;
+}
+
+.navlink {
+  /* Remove underscore and coloring from Navigational Links */
+  text-decoration: none;
+  color: gold;
+}
+
+.navlink_current {
+   /* Remove underscore from current Navigational Link and color it to appear "visited" */
+    text-decoration: none;
+    color: #5f47ff;
+}
+
+main {
+  margin: 0px 30px;
+  padding: 20px;
+
+  font-family: "Tillana", "Garamond", "Georgia", "Times New Roman", serif;
+  color: #50280a;
+
+  /* Background Image */
+  background-image: url(images/parchment_middle.png);
+  background-size: 100% auto;
+}
+
+.page_title {
+  text-align: center;
+  font-family: "New Rocker", "Garamond", "Georgia", "Times New Roman", serif;
+  font-size: 50px;
+  padding: 20px;
+}
+
+p {
+  margin: 20px 0px;
+}
+
+.half_p {
+   /* Make half-page paragraphs float to the left */
+    width: 60%;
+    float: left;
+}
+
+.subtitle {
+  font-family: "New Rocker", "Garamond", "Georgia", "Times New Roman", serif;
+  font-size: 30px;
+  padding: 10px;
+}
+
+ul {
+    padding: 0px 0px 20px 0px;
+}
+
+li {
+  padding: 0px 0px 2px 30px;
+
+  /* Change List Markers */
+  list-style: none;
+  background-image: url(images/listmarker_world.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1em;
+}
+
+form {
+  margin: 40px 0px 40px 0px;
+  padding: 40px 20px 20px 20px;
+  
+   /* Create dashed borders above and below the form */
+  border-top: dashed 3px #50280a;
+  border-bottom: dashed 3px #50280a;
+}
+
+input {
+   /* Make textboxes invisible */
+  border: none;
+  background-color: transparent;
+
+  font-family: "Gaegu", "Tillana", "Garamond", "Georgia", serif;
+  font-size: 26px;
+  color: #50280a;
+}
+
+input[type=text] {
+   /* Make textbox width responsive */
+  width: 100%
+}
+input[type=email] {
+  /* Make textbox width responsive */
+  width: 100%
+}
+
+input:focus {
+  /* Remove blue outline when selecting a textbox */
+  outline: none;
+}
+
+input[type="file"] {
+  /* Hide 'File' button and 'Selected File' text */
+  display: none;
+}
+
+textarea {
+  /* Make textareabox width responsive */
+  width: 100%;
+  height: 10em;
+  resize: none;
+
+  /* Make textareabox invisible */
+  border: none;
+  background-color: transparent;
+
+  font-family: "Gaegu", "Tillana", "Garamond", "Georgia", serif;
+  font-size: 26px;
+  color: #50280a;
+}
+
+textarea:focus {
+  /* Remove blue outline when selecting the textareabox */
+  outline: none;
+}
+
+#upload_button {
+  /* Create a custom 'File' button */
+  border: 2px dashed #50280a;
+  border-radius: 12px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+#send_button {
+  /* Create a custom 'Send' button */
+  border: 2px dashed #50280a;
+  border-radius: 12px;
+  padding: 5px 20px;
+  cursor: pointer;
+
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.full_img {
+  /* Center full-page images and make them responsive (limited) */
+  max-width: 100%;
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.half_img {
+  /* Make half-page images float to the right (next to the corresponding text) and make them responsive (limited) */
+  max-width: 40%;
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+}
+
+.full_img_caption {
+  padding: 0px 20px 0px 0px;
+  color: #50280a;
+  font-size: 12px;
+  text-align: end;
+}
+
+.half_img_caption {
+  padding: 0px 20px 0px 0px;
+  color: #50280a;
+  font-size: 12px;
+  text-align: end;
+}
+
+.video_frame {
+  /* Hacky way to make a Video responsive */
+  /* Create a "box" for the Video to live in */
+    padding-top:56.25%; /* 16:9 aspect ratio */
+    height: 0px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video_16_9 {
+  /* Adjust the Video size to the 'video_frame' box */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.external_link {
+  /* Remove underscoring and coloring for external links */
+  text-decoration: none;
+  color: #50280a;
+  font-weight: bold;
+}
+
+.external_link:hover {
+  /* Make uncerscoring only appear on hover */
+  text-decoration: underline;
+}
+
+.internal_link {
+  /* Remove underscoring and coloring for internal links */
+  text-decoration: none;
+  color: #50280a;
+  font-weight: bold;
+}
+
+#main_border {
+  margin: 0px 30px;
+  height: 100px;
+  text-align: center;
+
+  /* Background Image */
+  background-image: url(images/parchment_bottom.png);
+  background-size: 100% 100px;
+}
+
+footer {
+  margin: 0px 10px 10px 10px;
+  height: 100px;
+  text-align: center;
+
+  /* Background Image */
+  background-image: url(images/background_footer.png);
+  background-size: 100% 100px;
+
+  grid-area: footer;
+}
+
+#footer_text {
+  padding: 20px 0px 0px 0px;
+  font-family: "Tillana", "Garamond", "Georgia", "serif";
+  font-size: 15px;
+  color: #50280a;
+}
+
+#wincacademy {
+  font-family: "Tillana", "Garamond", "Georgia", "serif";
+  font-size: 12px;
+  color: #50280a;
+}
+
+/* For screens smaller than 500px */
+@media (max-width: 500px) {
+
+  #footer_text {
+    /* Lift the footer_text, so it stays within the Footer area (image) when being spread over multiple lines */
+    padding: 10px 0px 0px 0px;
+  }
+}
+
+/* For screens bigger than 768px */
+@media (min-width: 768px) {
+
+  .full_img_caption {
+    /* Place the figure caption in the center underneath full-page images */
+    padding: 0px;
+    text-align: center;
+  }
+
+  #footer_text {
+    /* Drop the footer_text, so it stays (roughly) centered within the Footer */
+    padding: 30px 0px 0px 0px;
+  }
+}
+
+/* For screens bigger than 960px */
+@media (min-width: 960px) {
+
+    .video_frame {
+        /* Cap the size of the video to 800 x 450 pixels */
+      padding-top:0%;
+      width: 800px;
+      height: 450px;
+  }
+}
+
+/* For screens bigger than 1280px */
+@media (min-width: 1280px) {
+
+  #navbar {
+    /* Make background image thinner so it doesn't surpass the header and footer */
+    margin: 0px 40px;
+
+    /* Change Navbar Button position with Flexbox */
+    justify-content: flex-end;
+    gap: 30px;
+    /* Pull the first Button away from the edge */
+    padding: 0px 50px;
+  }
+
+  main {
+    /* Make background image thinner so it doesn't surpass the header and footer */
+    margin: 0px 40px;
+  }
+
+  #main_border {
+    /* Make background image thinner so it doesn't surpass the header and footer */
+    margin: 0px 40px;
+  }
+
+
+}

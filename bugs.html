@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Link CSS 'style' file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Make Google fonts available -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tillana|New Rocker"
+    />
+
+    <!-- Page Title-->
+    <title>Nagarion | Known Bugs</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="header_title">Nagarion</h1>
+      <h2 id="header_subtitle">A High-Fantasy RPG World</h2>
+    </header>
+
+    <div id="main_content">
+      <nav id="navbar">
+        <button class="navbutton">
+          <a class="navlink" href="index.html" title="Homepage">Home</a>
+        </button>
+        <button class="navbutton">
+          <a class="navlink" href="world.html" title="World info page">World</a>
+        </button>
+        <button class="navbutton">
+          <a class="navlink" href="video.html" title="Video page">Video</a>
+        </button>
+        <button class="navbutton">
+          <a class="navlink" href="contact.html" title="Contact">Contact</a>
+        </button>
+        <button class="navbutton">
+          <a class="navlink_current" href="bugs.html" title="Bugs">Bugs</a>
+        </button>
+      </nav>
+      <main>
+        <h1 class="page_title">Crush them!</h1>
+        <p>
+          This page lists all known bugs or questions I still need answered.</p> 
+          <p>Not bugs in the setting or in the game, mind you, but in this website. This website is being built as part of an assignment for the Front-end Development course at Winc Academy, and I'm still learning how to do things right. I'm using this page to list the problems I still encounter.
+        </p>
+        <section>
+        <p>
+          <h3>KNOWN BUG: Navigation bar 'flags' overlap on smaller screens</h3>
+          When the screen gets too narrow, the flags in the navigation bar start overlapping. Honestly, this isn't even a big issue to me. The problem is that the text on the flags starts shifting and overlapping other flags. I have to either scale the flags (and text), or find a nice-looking way of positioning them otherwise on small screens.
+        </p>
+      </section>
+      <section>
+        <p>
+          <h3>KNOWN BUG: Floating elements cause problems in 'World page'</h3>
+          I floated the textboxes for the information on the continents on the World page to the left, so the images would end up in the same line (on the left). This works, until the text becomes longer than the height of the image. The title of the next subject will then float to the left as well, making room for the extra text. I plan on fixing this with either Flexbox or CSS Grid.</p>
+      </section>
+      <section>
+        <p>
+          <h3>KNOWN BUG: Parchment background doesn't line up</h3>
+          The repeating (and tiling) middle part of the parchment background, for the main part of the website doesn't line up with the bottom part. Ideally, the image would scale partially, until a certain treshold, and then add another repetition. So that the bottom of the image is also the bottom of the container at all times.</p>
+          <p>EXAMPLE & POSSIBLE SOLUTION: <br>
+
+            Set the container height, to full instances of the image height. <br><br>
+            or, even better yet; <br>
+            <ul>
+              <li>If the content (height) is equal to 1 background image, use 1 background image (unscaled)</li>
+              <li>If the content (heigt) is equal to 0,6 background image, scale 1 background image to 0,6</li>
+              <li>If the content (height) is equal to 1,3 background images, scale 1 background image to 1,3</li>
+              <li>If the content (height) is equal to 1,7 background images, use 2 background images, and scale the total to 1,7</li>
+              <li>If the content (height) is equal to 2 background images, use 2 background images (unscaled)</li>
+              <li>If the content (height) is equal to 2,4 background images, use 2 background images, and scale the total to 2,4</li>
+              <li>If the content (height) is equal to 5,8 background images, use 6 background images, and scale the total to 5,8</li>
+              <li>Etc...</li>
+            </ul>      
+            QUESTION: <br>
+          Is this possible, and if so, how? (Or is this too early to learn at this point, seeing as this is only my first assignment?)</p>
+      </section>
+      <section>
+        <p>
+          <h3>KNOWN BUG: Video Scale</h3>
+          I couldn't get the video to scale nicely, while preserving its aspect ratio. I found a hacky way online, but would still like to learn the correct way of fixing this. I also couldn't set a max-width or max-height without messing up the aspect ratio, so I hacked this by adding a media query for when I wanted the video to stop scaling.</p>
+          <p>QUESTION: <br>
+            What is the correct way to scale a video while preserving its aspect ratio?</p>
+      </section>
+
+      <section>
+        <p>
+          <h3>KNOWN BUG: Unstyled Scrollbar in textarea on 'Contact' page</h3>
+          When more text than the default size of the 'Message' textarea on the 'Contact' page can hold is typed, a scrollbar appears. This scrollbar isn't styled to fit within the artstyle of the form.</p>
+      </section>
+
+      <section>
+        <p>
+          <h3>KNOWN BUG: Unstyled Checkboxes and Radio Buttons on 'Contact' page</h3>
+          The checkboxes and Radio buttons on the 'Contact' page aren't styled to fit within the artstyle of the form.</p>
+      </section>
+
+      <section>
+        <p>
+          <h3>KNOWN "BUG": Temporary Art</h3>
+          A lot of this site uses temporary, or quickly made art. This is something I will pick up soon, to make sure the art style of the website is consistent (and fully mine)</p>
+          
+        
+      </section>
+      </main>
+      <div id="main_border"></div>
+    </div>
+
+    <footer>
+      <h6 id="footer_text">
+        Nagarion - A High-Fantasy RPG World - by Raymon Manders
+      </h6>
+      <h6 id="wincacademy">
+        This website is part of an assignment for the Front-end Development
+        course at Winc Academy
+      </h6>
+    </footer>
+  </body>
+</html>
